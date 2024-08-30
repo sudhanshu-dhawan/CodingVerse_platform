@@ -21,12 +21,19 @@ dbConnect();
 //middlewares
 app.use(express.json());
 app.use(cookieParser());
-app.use(
-	cors({
-		origin:"http://localhost:3000",
-		credentials:true
-	})
-)
+const allowedOrigins = ['http://localhost:3000', 'https://coding-verse.vercel.app'];
+
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+};
+
+app.use(cors(corsOptions));
 
 
 app.use(
