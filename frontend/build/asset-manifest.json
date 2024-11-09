@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/static/css/main.be83bd62.css",
+    "main.js": "/static/js/main.73a34bfb.js",
+    "static/media/coding bg1.jpg": "/static/media/coding bg1.31e50faaa4d7d01d71f3.jpg",
+    "static/media/TimelineImage.png": "/static/media/TimelineImage.a610b1e5d891ac77fe93.png",
+    "static/media/coding bg7.jpg": "/static/media/coding bg7.e50b3a53dd55971bc3c4.jpg",
+    "static/media/coding bg2.jpg": "/static/media/coding bg2.974f61b0a1cba0c30d16.jpg",
+    "static/media/coding bg5.jpg": "/static/media/coding bg5.9ad02816fc5f41f58d22.jpg",
+    "static/media/Instructor.png": "/static/media/Instructor.8b4c4f204053f0dfe844.png",
+    "static/media/FoundingStory.png": "/static/media/FoundingStory.84f2828a5f4a9c08a802.png",
+    "static/media/Plan_your_lessons.svg": "/static/media/Plan_your_lessons.ad4c44a9b3bdccfd3ea56fcb710755d0.svg",
+    "static/media/Compare_with_others.svg": "/static/media/Compare_with_others.2bf9fba5e5cb6fbfd484b2e9d0135538.svg",
+    "static/media/coding bg9.jpg": "/static/media/coding bg9.8d72bbb139d7a2370f4a.jpg",
+    "static/media/coding bg10.jpg": "/static/media/coding bg10.88f06ea819016acc50d9.jpg",
+    "static/media/coding bg4.jpg": "/static/media/coding bg4.82dc900c05d05e639840.jpg",
+    "static/media/coding bg8.jpeg": "/static/media/coding bg8.270cd6d009fce85f1d3d.jpeg",
+    "static/media/coding bg6.jpeg": "/static/media/coding bg6.6e3a2a5fd9b66ea80657.jpeg",
+    "static/media/coding bg3.jpg": "/static/media/coding bg3.85e3ac444e21d25fc43e.jpg",
+    "static/media/Logo-Full-Light.png": "/static/media/Logo-Full-Light.cd4526cb3d4e4aaba931.png",
+    "static/media/coding bg11.jpg": "/static/media/coding bg11.b27bddb2db54ae188f5b.jpg",
+    "static/media/rzp_logo.png": "/static/media/rzp_logo.db1cd7db1b52c2ed8e3d.png",
+    "static/media/Know_your_progress.png": "/static/media/Know_your_progress.cf3ea1c51544985430d3.png",
+    "static/media/frame.png": "/static/media/frame.3a238e5f26d676376e1d.png",
+    "static/media/signup.webp": "/static/media/signup.acaf50bcb11d9aec44b4.webp",
+    "static/media/login.webp": "/static/media/login.5eeb0b81544a40330d4b.webp",
+    "static/media/aboutus1.webp": "/static/media/aboutus1.86606deea209badf5925.webp",
+    "static/media/aboutus2.webp": "/static/media/aboutus2.0a1cd797ce3a69e81830.webp",
+    "static/media/aboutus3.webp": "/static/media/aboutus3.f5cfba861877ea03735d.webp",
+    "static/media/Logo2.svg": "/static/media/Logo2.86881d6fa0d417d6622a8707fea5730c.svg",
+    "static/media/Logo1.svg": "/static/media/Logo1.b2c24a5a3beb20a875b0f80c5d3a7933.svg",
+    "static/media/Logo3.svg": "/static/media/Logo3.9ede0b8fa9815c349607d24a2fc2db64.svg",
+    "static/media/Logo4.svg": "/static/media/Logo4.396cbd92b53e6362b13c448e73c6f28b.svg",
+    "index.html": "/index.html",
+    "main.be83bd62.css.map": "/static/css/main.be83bd62.css.map",
+    "main.73a34bfb.js.map": "/static/js/main.73a34bfb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.be83bd62.css",
+    "static/js/main.73a34bfb.js"
+  ]
+}
