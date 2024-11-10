@@ -9,73 +9,58 @@ const contactUsRoute = require("./routes/Contact");
 const dbConnect = require("./config/database");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
-const {cloudinaryConnect } = require("./config/cloudinary");
+const { cloudinaryConnect } = require("./config/cloudinary");
 const fileUpload = require("express-fileupload");
 const dotenv = require("dotenv");
 
 dotenv.config();
 const PORT = process.env.PORT || 4000;
 
-//database connect
+// Database connection
 dbConnect();
-//middlewares
+
+// Middlewares
 app.use(express.json());
 app.use(cookieParser());
+
+// CORS configuration to allow both frontend origins
 app.use(cors({
-    origin: 'https://coding-verse-platform-frontend-97az1ie6w.vercel.app', // Allow your frontend's URL
+    origin: [
+        'https://coding-verse-platform-frontend-97az1ie6w.vercel.app', // Old frontend URL
+        'https://coding-verse-platform-frontend.vercel.app'          // New frontend URL
+    ],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization']
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true // Allow cookies if needed
 }));
-  
-  const corsOptions = {
-	origin: function (origin, callback) {
-	  if (allowedOrigins.includes(origin) || !origin) {
-		callback(null, true);
-	  } else {
-		callback(new Error('Not allowed by CORS'));
-	  }
-	},
-	methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-	allowedHeaders: ['Content-Type', 'Authorization'], // Specify allowed headers if needed
-	credentials: true, // Allow credentials if you're using cookies or session
-  };
-  
-  app.use(cors(corsOptions));
-  
 
-// app.use(cors({
-// 	origin:['http://localhost:3000',"https://deploy-codingVerse.vercel.app"],
-// 	methods:["POST","GET"],
-// 	credentials:true
-// }))
-
-
+// File upload configuration
 app.use(
-	fileUpload({
-		useTempFiles:true,
-		tempFileDir:"/tmp",
-	})
-)
-//cloudinary connection
+    fileUpload({
+        useTempFiles: true,
+        tempFileDir: "/tmp",
+    })
+);
+
+// Cloudinary connection
 cloudinaryConnect();
 
-//routes
+// Routes
 app.use("/api/v1/auth", userRoutes);
 app.use("/api/v1/profile", profileRoutes);
 app.use("/api/v1/course", courseRoutes);
 app.use("/api/v1/payment", paymentRoutes);
 app.use("/api/v1/reach", contactUsRoute);
 
-//def route
-
+// Default route
 app.get("/", (req, res) => {
-	return res.json({
-		success:true,
-		message:'Your server is up and running....'
-	});
+    return res.json({
+        success: true,
+        message: 'Your server is up and running....'
+    });
 });
 
+// Start server
 app.listen(PORT, () => {
-	console.log(`App is running at ${PORT}`)
-})
-
+    console.log(`App is running at ${PORT}`);
+});
