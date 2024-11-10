@@ -21,12 +21,11 @@ dbConnect();
 //middlewares
 app.use(express.json());
 app.use(cookieParser());
-const allowedOrigins = [
-	'http://localhost:3000', 
-	'https://coding-verse-platform-frontend.vercel.app',
-	'https://coding-verse-platform-frontend-jg4zq3lcj.vercel.app' // Newly generated Vercel subdomain
-  ];
-  
+app.use(cors({
+    origin: 'https://coding-verse-platform-frontend-97az1ie6w.vercel.app', // Allow your frontend's URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
   
   const corsOptions = {
 	origin: function (origin, callback) {
