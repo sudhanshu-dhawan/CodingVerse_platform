@@ -21,19 +21,23 @@ dbConnect();
 //middlewares
 app.use(express.json());
 app.use(cookieParser());
-const allowedOrigins = ['http://localhost:3000', 'https://coding-verse.vercel.app'];
-
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-};
-
-app.use(cors(corsOptions));
+const allowedOrigins = [
+	'http://localhost:3000', 
+	'https://coding-verse-platform-frontend.vercel.app', // Add the correct Vercel frontend URL
+	'https://coding-verse.vercel.app' // If you also have another deployment here
+  ];
+  
+  const corsOptions = {
+	origin: function (origin, callback) {
+	  if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+		callback(null, true);
+	  } else {
+		callback(new Error('Not allowed by CORS'));
+	  }
+	},
+  };
+  
+  app.use(cors(corsOptions));
 
 // app.use(cors({
 // 	origin:['http://localhost:3000',"https://deploy-codingVerse.vercel.app"],
